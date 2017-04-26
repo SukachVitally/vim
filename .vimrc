@@ -16,7 +16,8 @@ Plugin 'majutsushi/tagbar'          	    " Class/module browser
 Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
 
 "-------------------=== Other ===-------------------------------
-Plugin 'bling/vim-airline'   	    	    " Lean & mean status/tabline for vim
+Plugin 'vim-airline/vim-airline'   	    	    " Lean & mean status/tabline for vim
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Lokaltog/powerline'                 " Powerline fonts plugin
 Plugin 'fisadev/FixedTaskList.vim'  	    " Pending tasks list
 Plugin 'rosenfeld/conque-term'      	    " Consoles as buffers
@@ -117,6 +118,7 @@ let NERDTreeIgnore=['\.pyc$', '\.pyo$']     " Ignore files in NERDTree
 let NERDTreeWinSize=40
 autocmd VimEnter * NERDTree                 " NERDTree autoload
 autocmd VimEnter * if !argc() | NERDTree | endif
+autocmd VimEnter * NERDTreeToggle
 
 "=====================================================
 "" SnipMate settings
@@ -245,4 +247,3 @@ nnoremap <F7> :exe "ConqueTermSplit ipython " . expand("%")<CR> " and debug-mode
 
 :iabbrev @@ sukach.v.v@gmail.com 
 :inoremap jk <esc>
-
